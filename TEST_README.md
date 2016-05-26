@@ -27,6 +27,20 @@ This app is terrific at filtering our data. The homepage contains: thumbnail pic
 
 #Detail View
 
-Clicking on a specific soldier gives readers a thumbnail image with the soldier's name and age in **bold type.**
+Clicking on a specific soldier gives readers a thumbnail image with the soldier's name and age in **bold type.** In addition, one can learn relevant personal details about the soldier (*high school*, *hometown*, and a *lead quote from a surviving family member.*) Here's an example of Matthew W. Ramsey, the last soldier to die in Iraq.
+
+http://projects.latimes.com/wardead/name/matthew-w-ramsey/
+
 
 #Tables
+
+The tables, as outlined in filtering options, are useful for our readers who may know of a soldier who died in their area but somehow forgot their name. We believe this is useful because it can also identify trends involving soldier deaths.
+
+#Conclusion
+
+
+
+
+
+
+
