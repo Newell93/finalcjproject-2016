@@ -23,7 +23,7 @@ We then joined the database of California names with soldiers who were written a
 
 #Filtering Options
 
-This app is terrific at filtering our data. The homepage contains: thumbnail pictures of the five soldiers who died most recently, the total number killed (which can be searched by last name) and categories our readers might like to peruse. For example, we grouped deaths by cemetery, hometown, marital status, high school and gender. A graduate of Sultana High School in Hesperia could click on the school name to see all the fallen soldiers who had graduated from this high school.
+This app is terrific at filtering our data. The homepage contains: thumbnail pictures of the five soldiers who died most recently, the total number killed (which can be searched by last name) and categories our readers might like to peruse. For example, we grouped deaths by cemetery, hometown, marital status, high school and gender. A graduate of Sultana High School in Hesperia could click on the school name to see all the fallen soldiers who graduated from this high school.
 
 #Detail View
 
@@ -38,7 +38,7 @@ The tables, as outlined in filtering options, are useful for our readers who may
 
 #Conclusion
 
-
+We believe this is an effective map that performs a public service to not only our readers, but the American community as a whole. We encourage readers to leave behind memories and encourage others to share.
 
 
 
