@@ -16,7 +16,9 @@ http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map
 
 #Data
 *1.* My primary source of data comes from the California Department of Health.
+
 https://www.cdph.ca.gov/programs/immunize/Pages/ImmunizationLevels.aspx
+
 The site has .xls files of vaccination rates for students enrolled in kindergarten and seventh-grade. The data contains unique identifiers like school code, county, school name, vaccination rate and the percentage of students with a belief or medical exemption from vaccines. I plan on *adding* the two .xls files together to get one master list of rates in kindergartens and middle schools across the state.
 
 *2.* My secondary source of data comes from the California Department of Education.
