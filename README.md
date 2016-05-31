@@ -1,4 +1,7 @@
 #Elevator Pitch
+
+**VaccinationRateMapper**
+
 Have you ever wanted to know whether the vaccination rate of a school in your neighborhood? Maybe you're concerned since you're about to put your children in kindergarten, or you could be looking to identify schools where there aren't enough vaccinations to provide herd immunity against measles, mumps or rubella? Do you want the information to be individualized, as oppposed to being plotted on a giant map?
 
 This application **will allow users to quickly type in the name of a nearby K-8 school to determine its vaccination rate.** This personalized app is easier to use than similar ones made by organizations like The New York Times and Hollywood Reporter. Using this app can help educate parents or curious neighbors as to whether their local schools have met their seal of approval when it comes to vaccination rates. It's also a look at the most current data from the 2015-16 school year.
@@ -6,12 +9,16 @@ This application **will allow users to quickly type in the name of a nearby K-8 
 
 #Prior Examples
 
-*The Hollywood Reporter* 
+*1. The Hollywood Reporter* 
 
 http://www.hollywoodreporter.com/features/los-angeles-vaccination-rates/fusion/
 
+This does a great job of mapping all the available schools in Los Angeles, coloring them based on their vaccination-rate percentages.
 
-*The New York Times*
+It's a bit of an eyesore, and the app only contains info on Los Angeles County, not the entire state.
+
+
+*2. The New York Times*
 
 http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html?_r=0
 
