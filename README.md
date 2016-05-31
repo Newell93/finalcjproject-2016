@@ -7,10 +7,12 @@ This application **will allow users to quickly type in the name of a nearby K-8 
 #Prior Examples
 
 *The Hollywood Reporter* 
+
 http://www.hollywoodreporter.com/features/los-angeles-vaccination-rates/fusion/
 
 
 *The New York Times*
+
 http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html?_r=0
 
 
@@ -36,9 +38,18 @@ This contains more information about each school, and it can be joined with the 
 
 This dataset also contains coordinates, which I could use to plot points on a map if I choose. It might be nice to feed these coordinates into a Google Maps API to get a screenshot of each school that the user asks about.
 
+The **new categorial variable** will be a 'Yes' or 'No.' This will refer to whether the school has herd immunity, which is based on whether its vaccination rate is high enough to prevent an epidemic from spreading amongst the kids.
+
+I'm having trouble identifying what the **new continuous variable** could be in this case.
 
 #Filtering Options
 
+My goal for this project is to allow users to pick a school by including its partial name, let the app identify a match, and then present pertinent info about the school **[name, location, vaccination rate, belief-exemption rate and other factors]** and a satellite or streetview image.
+
+
+I could also allow them to find schools by looking at a drop-down county menu that could also let them find a list of schools in their area.
+
+Users can **sort** the data by vaccination rate or belief exemption rate as percentages. 
 
 
 
