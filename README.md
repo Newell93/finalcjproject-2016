@@ -49,18 +49,17 @@ My goal for this project is to allow users to pick a school by including its par
 
 I could also allow them to find schools by looking at a drop-down county menu that could also let them find a list of schools in their area.
 
-Users can **sort** the data by vaccination rate or belief exemption rate as percentages. 
-
-
-
+Users can **sort** the data by vaccination rate or belief exemption rate as percentages, ascending or descending. 
 
 #Views and Routes
 
-
+Not much to say about these at this point. I will include screenshots when the app is built.
 
 
 #Visualizations
 
-
+Same as **Views and Routes.**
 
 #Deployment
+
+Same as **Views and Routes.**
