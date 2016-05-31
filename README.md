@@ -22,6 +22,35 @@ It's a bit of an eyesore, and the app only contains info on Los Angeles County, 
 
 http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html?_r=0
 
+A great visualization that highlights trends in where schools of high exemption rates are located, this example is the best use of mapping I have seen on vaccines.
+
+**THERE IS NO SEARCH BAR.** It's a pain to find a school in your area.
+
+
+**3. The Los Angeles Times**
+
+http://www.latimes.com/local/california/la-me-measles-20150418-story.html
+
+This is a good story describing how California may experience another measles outbreak in some areas because the vaccination rates there are so low. 
+
+It also suggests that a measles outbreak could occur where a school's vaccination rate is below **86 percent.** This may be a good threshold to determine whether the schools in the dataset have built-in herd immunity.
+
+**4. The San Jose Mercury News**
+
+http://www.mercurynews.com/health/ci_28936729/california-vaccine-law-opponents-repeal-effort-fails-but
+
+This is a good context story since it shows Gov. Brown signed a bill banning religious or personal belief exemptions from vaccines.
+
+I don't think it's taken effect yet, so it's difficult to track whether the debate around the bill prompted more parents to vaccinate their children.
+
+**5. Centers for Disease Control**
+
+http://www.cdc.gov/measles/cases-outbreaks.html
+
+After the measles outbreak near Disneyland (667 cases in 2014, 189 cases in 2015), the number of cases has decreased rapidly. Only 10 cases of measles have been cited this year.
+
+This is good context because it shows measles paranoia/fear has subsided, though there are people who still want to know their school's average vaccination rate.
+
 
 #Data
 **1.** My primary source of data comes from the California Department of Health.
