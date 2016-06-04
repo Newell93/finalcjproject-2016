@@ -78,6 +78,9 @@ The **new categorial variable** will be a 'Yes' or 'No.' This will refer to whet
 
 I'm having trouble identifying what the **new continuous variable** could be in this case.
 
+#Data Cleaning
+
+
 #Filtering Options
 
 My goal for this project is to allow users to pick a school by including its partial name, let the app identify a match, and then present pertinent info about the school **[name, location, vaccination rate, belief-exemption rate and other factors]** and a satellite or streetview image.
