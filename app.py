@@ -39,6 +39,15 @@ def results():
                            master_data=schools, sortby=_sortby)
     return html
 
+@app.route('/<row_school_code>/')
+def detail(row_school_code):
+    template = 'detail.html'
+    object_list = get_data()
+    for row in object_list:
+    	if row['school_code'] == row_school_code:
+        	return render_template(template, object=row)
+    abort(404)
+
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)

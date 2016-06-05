@@ -7,6 +7,7 @@
 </head>
 <body>
 
+
   <div>Search again:   {% include 'searchbox.html' %}</div>
 
 
@@ -17,18 +18,19 @@
 
     <table border=1 cellpadding=7>
     <tr>
+      <th>School Name</th>
       <th>City</th>
       <th>PBE_Percent</th>
       <th>County</th>
     </tr>
       {% for p in master_data %}
         <tr>
+          <td><a href="{{ p.school_code}}">{{ p.school_name}}</a></td>
           <td>{{p.city}}</td>
           <td>{{p.pbe_per}}</td>
           <td>{{p.county}}</td>
         </tr>
       {% endfor %}
-
   </table>
 
   </body>
