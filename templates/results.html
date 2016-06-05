@@ -1,1 +1,35 @@
-results.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search results</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+</head>
+<body>
+
+  <div>Search again:   {% include 'searchbox.html' %}</div>
+
+
+  <p>Your search for <strong>"{{ city }}"</strong>
+  is included below.</p>
+
+  <p>The following results are sorted by <strong>{{sortby}}</strong>. Enjoy perusing this incredible site!</p>
+
+    <table border=1 cellpadding=7>
+    <tr>
+      <th>City</th>
+      <th>PBE_Percent</th>
+      <th>County</th>
+    </tr>
+      {% for p in master_data %}
+        <tr>
+          <td>{{p.city}}</td>
+          <td>{{p.pbe_per}}</td>
+          <td>{{p.county}}</td>
+        </tr>
+      {% endfor %}
+
+  </table>
+
+  </body>
+</html>
