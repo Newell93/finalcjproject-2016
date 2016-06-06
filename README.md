@@ -57,9 +57,7 @@ This is good context because it shows measles paranoia/fear has subsided, though
 
 https://www.cdph.ca.gov/programs/immunize/Pages/ImmunizationLevels.aspx
 
-https://www.cdph.ca.gov/programs/immunize/Documents/2015-2016%20CA%20Child%20Care%20Data.xlsx
-
-https://www.cdph.ca.gov/programs/immunize/Documents/2015-2016%20CA%207th%20Grade%20Data_021816.xls
+https://www.cdph.ca.gov/programs/immunize/Documents/2015-16_CA_Kindergarten_Data.xls
 
 
 The site has .xls files of vaccination rates for students enrolled in kindergarten and seventh-grade. The data contains unique identifiers like school code, county, school name, vaccination rate and the percentage of students with a belief or medical exemption from vaccines. I plan on *adding* the two .xls files together to get one master list of rates in kindergartens and middle schools across the state.
@@ -141,9 +139,40 @@ My visualization *(map)* is contained on all the individual schools on the detai
 
 Same as **Views and Routes.**
 
-#Final Checklist
+#Final Checklist (Making Life Easier)
 
 Data comes from 2 or more independent sources: **YES**
 
 The app should run off a data file with a size of no more than 25,000 records: **YES**
+
+Must contain at least one join: **YES**
+
+Must create at least one new categorical variable: **YES**. This is the *herd* column in *master_data.csv*.
+
+Must create at least one new continuous variable: **YES**. This is the *utd_plus_cond_per* column in *master_data.csv*. This is the sum of the vaccination rate and the conditional percentage of students who will get vaccines.
+
+Must contain at least one summarization: **YES**. This is the *Exempt?* column. This states whether the school has any exemptions.
+
+Allow user to search or filter by at least two different attributes: **1/2 YES**. I have only one attribute: *city*.
+
+Allow user to sort by two different attributes, in both ascending and descending order: **YES**
+
+Must have a compelling front page: **YES**
+
+Must have a search results view: **YES**
+
+Must have a view that renders a table of aggregate data: **NO**. There is an aggregate table, but it's not a view.
+
+Must have a view that renders detailed information about an individual record or aggregate: **YES**
+
+Lists of data results should be rendered in multi-column tables: **YES**
+
+Include at least one chart or map: **YES**
+
+
+
+
+
+
+
 
