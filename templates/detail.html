@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Search results</title>
-  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
 </head>
 <body>
+        <div id="map" style="width:100%; height:300px;"></div>
+
 <h1>
-            {{ object.school_name }} .
+        <p>You have chosen {{ object.school_name }}. </p>
+
+        <p>It's located in {{ object.city }}, California. </p>
+
+        <p>It has {{ object.enrollment }} students enrolled in kindergarten according to data from the 2015-16 school year. </p>
+
+        <p>Does this school have herd immunity? {{ object.herd }}. </p>
+
         </h1>
-    </body>
+
+         <script type="text/javascript">
+            var map = L.map('map').setView([{{ object.Latitude }}, {{ object.Longitude }}], 16);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var marker = L.marker([{{ object.Latitude }}, {{ object.Longitude }}]).addTo(map);
+        </script>
 </body>
 </html>

@@ -7,13 +7,15 @@ VACCINE_FNAME = './static/data/master_data.csv'
 app = Flask(__name__)
 
 def get_data():
-	with open(VACCINE_FNAME, encoding='latin1') as f:
-		newrows = []
-		for row in csv.DictReader(f):
-			if row['pbe_per'] != '':
-				row['pbe_per'] = float(row['pbe_per'])
-				newrows.append(row)
-	return newrows
+    with open(VACCINE_FNAME, encoding='latin1') as f:
+        newrows = []
+        for row in csv.DictReader(f):
+            if row['pbe_per'] != '':
+                row['pbe_per'] = float(row['pbe_per'])
+                row['enrollment'] = float(row['enrollment'])
+                newrows.append(row)
+    return newrows
+
 
 def filter_data(city='', sortby=None):
     upcity = city.upper()
@@ -22,13 +24,19 @@ def filter_data(city='', sortby=None):
         return sorted(rows, key=itemgetter('pbe_per'), reverse=True)
     elif sortby == 'Lowest_PBE_Rates':
         return sorted(rows, key=itemgetter('pbe_per'))
+    elif sortby == 'Highest_Enrollment':
+        return sorted(rows, key=itemgetter('enrollment'))
+    elif sortby == 'Lowest_Enrollment':
+        return sorted(rows, key=itemgetter('enrollment'))
     else:
         return sorted(rows, key=itemgetter('city'))
+
 
 @app.route("/")
 def homepage():
     html = render_template('index.html')
     return html
+
 
 @app.route("/results")
 def results():
@@ -39,13 +47,14 @@ def results():
                            master_data=schools, sortby=_sortby)
     return html
 
+
 @app.route('/<row_school_code>/')
 def detail(row_school_code):
     template = 'detail.html'
     object_list = get_data()
     for row in object_list:
-    	if row['school_code'] == row_school_code:
-        	return render_template(template, object=row)
+        if row['school_code'] == row_school_code:
+            return render_template(template, object=row)
     abort(404)
 
 
