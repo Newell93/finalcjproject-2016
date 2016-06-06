@@ -99,9 +99,13 @@ The data cleaning process took some time. I will do a breakdown the process belo
 **7.**This should be the SQL command I used, but you should be aware some of the imported file names are different than the .csv names.
 
 **SELECT * 
+
 FROM clean_kinder_kinder
+
 JOIN clean_school_code
+
 ON clean_kinder_kinder.school_code = clean_school_code.school_code
+
 WHERE clean_kinder_kinder.enrollment != ''**
 
 
