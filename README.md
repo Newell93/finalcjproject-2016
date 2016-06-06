@@ -92,7 +92,18 @@ The data cleaning process took some time. I will do a breakdown the process belo
 
 **4.** I then started with **raw_school_codes.xls**. It's a renamed version of the original file from *ftp://ftp.cde.ca.gov/demo/schlname/pubschls.xls*.
 
-**5.** I then created a new column called *school_code*. This was created by pulling the last seven digits from the much-larger school code. I need to perform this **-RIGHT** function so this school code could be joined with the seven-digit school code in **clean_kinder.xls**.
+**5.** I then created a new column called *school_code*. This was created by pulling the last seven digits from the much-larger school code. I need to perform this **-RIGHT** function so this school code could be joined with the seven-digit school code in **clean_kinder.xls**. Once completed, I named this **clean_school_codes.xls**.
+
+**6.** Aaaaaaaaaaaaaaaand then I used SQLite to join both of my clean files.
+
+**7.**This should be the SQL command I used, but you should be aware some of the imported file names are different than the .csv names.
+
+**SELECT * 
+FROM clean_kinder_kinder
+JOIN clean_school_code
+ON clean_kinder_kinder.school_code = clean_school_code.school_code
+WHERE clean_kinder_kinder.enrollment != ''**
+
 
 #Filtering Options
 
