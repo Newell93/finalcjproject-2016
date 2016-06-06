@@ -26,24 +26,12 @@
 
 </head>
 <body>
-  <h3>VaccineRateMapper</h3>
   {% include 'searchbox.html' %}
   <p>Have you ever wanted to know the vaccination rate of a school in your neighborhood? Maybe you're concerned since you're about to put your children in kindergarten, or you could be looking to identify schools where there aren't enough vaccinations to provide herd immunity against measles, mumps or rubella? Do you want the information to be individualized, as oppposed to being plotted on a giant map? </p>
 
 <p>This application will allow you to quickly type in the name of any public kindergarten in California and determine its vaccination rate. Enjoy! </p>
 
-  <p>Data comes from <a href="https://afs.stanford.edu/download/?path=/afs/ir/users/s/n/snewell/pivot_table.csv">the College Scorecard. WARNING = Clicking the link will cause a rather large file to download.</a></p>
-
-
-        <script type="text/javascript">
-            var map = L.map('map').setView([37.4241, -122.1661], 15);
-            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
-                subdomains: ['otile1','otile2','otile3','otile4']
-            });
-            map.addLayer(mapquestLayer);
-        </script>
+  <p>Aggregate data comes from <a href="https://afs.stanford.edu/download/?path=/afs/ir/users/s/n/snewell/pivot_table.csv">a .csv file.</a></p>
 
 <footer>
   <p>Posted by: Hege Refsnes</p>

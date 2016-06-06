@@ -96,9 +96,9 @@ The data cleaning process took some time. I will do a breakdown the process belo
 
 **6.** Aaaaaaaaaaaaaaaand then I used SQLite to join both of my clean files.
 
-**7.**This should be the SQL command I used, but you should be aware some of the imported file names are different than the .csv names.
+**7.**This should be the SQL command I used, but you should be aware some of the imported file names are different than the .csv names. I used SQLite to filter out any schools in the vaccine database that had an empty enrollment field. This left me with **5929** public kindergartens for my app.
 
-**SELECT * 
+SELECT * 
 
 FROM clean_kinder_kinder
 
@@ -106,21 +106,30 @@ JOIN clean_school_code
 
 ON clean_kinder_kinder.school_code = clean_school_code.school_code
 
-WHERE clean_kinder_kinder.enrollment != ''**
+WHERE clean_kinder_kinder.enrollment != ''
+
+**8.** I then named my new .csv as **master_data.csv**. This is what my app runs on. I added three variable fields to this set in Excel, but that will be explained later.
 
 
-#Filtering Options
+#Filtering and Sorting Options
 
-My goal for this project is to allow users to pick a school by including its partial name, let the app identify a match, and then present pertinent info about the school **[name, location, vaccination rate, belief-exemption rate and other factors]** and a satellite or streetview image.
+This project allows users to filter the massive dataset by one criteria: **city**. Partial names work. 
 
+It allows users to filter by high-exemption vaccination rates or low-exemption vaccination rates, and high-enrollment or low-enrollment. Some users may want to find schools in the city with the largest percentage of children whos aren't vaccinated because they qualified for a personal belief exemption. Other parents may want to sort kindergartens based on enrollment size.
 
-I could also allow them to find schools by looking at a drop-down county menu that could also let them find a list of schools in their area.
+This project allow users to pick a school by including its partial name, let the app identify a match, and then present pertinent info about the school **[name, location, vaccination rate, belief-exemption rate and other factors]** and a satellite or streetview image.
 
-Users can **sort** the data by vaccination rate or belief exemption rate as percentages, ascending or descending. 
+Both are ascending and descending. 
 
 #Views and Routes
 
-Not much to say about these at this point. I will include screenshots when the app is built.
+**Index** The index page is fairly simple. It contains the project's name, my name, an image of a vaccine *(taken from Wikimedia Commons)*, my search field and a few relevant paragraphs about what the app does.
+
+**Results** The results page is straightforward. The results are filtered by which city was entered and which **sort by** attribute was selected. It gives users a clean table to give them the most relevant information regarding their search.
+
+**Detail** The details page provides even more information than what's contained on the results page. It gives the school's name, city, number of enrollment students and an **educated guess** as to whether the school has herd immunity. I determined this by adding the vaccination rate and the conditional rate of students about to be vaccinated. If the sum of those fields was greater than 95 percent, I said it "probably" has herd immmunity, meaning that if one child were to get sick, the likelihood of it spreading to other kids would be small. This 95 percent figure came from the University of Oxford. http://www.ovg.ox.ac.uk/herd-immunity
+
+*Aggregate**
 
 #Visualizations
 
