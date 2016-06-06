@@ -129,12 +129,21 @@ Both are ascending and descending.
 
 **Detail** The details page provides even more information than what's contained on the results page. It gives the school's name, city, number of enrollment students and an **educated guess** as to whether the school has herd immunity. I determined this by adding the vaccination rate and the conditional rate of students about to be vaccinated. If the sum of those fields was greater than 95 percent, I said it "probably" has herd immmunity, meaning that if one child were to get sick, the likelihood of it spreading to other kids would be small. This 95 percent figure came from the University of Oxford. http://www.ovg.ox.ac.uk/herd-immunity
 
-*Aggregate**
+There's also a map showing where the school is located. This is unique to the details page.
+
+*Aggregate** I confess that this isn't as good as it can be. The aggregate is linked to on the index page. It downloads a .csv file to your desktop that gives you a county-wide look at kindergarten vaccination rates in the state.
 
 #Visualizations
 
-Same as **Views and Routes.**
+My visualization *(map)* is contained on all the individual schools on the details page. This is my version of the visualization.
 
 #Deployment
 
 Same as **Views and Routes.**
+
+#Final Checklist
+
+Data comes from 2 or more independent sources: **YES**
+
+The app should run off a data file with a size of no more than 25,000 records: **YES**
+
