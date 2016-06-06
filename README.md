@@ -2,9 +2,9 @@
 
 **VaccinationRateMapper**
 
-Have you ever wanted to know whether the vaccination rate of a school in your neighborhood? Maybe you're concerned since you're about to put your children in kindergarten, or you could be looking to identify schools where there aren't enough vaccinations to provide herd immunity against measles, mumps or rubella? Do you want the information to be individualized, as oppposed to being plotted on a giant map?
+Have you ever wanted to know the vaccination rate of a school in your neighborhood? Maybe you're concerned since you're about to put your children in kindergarten, or you could be looking to identify schools where there aren't enough vaccinations to provide herd immunity against measles, mumps or rubella? Do you want the information to be individualized, as oppposed to being plotted on a giant map?
 
-This application **will allow users to quickly type in the name of a nearby K-8 school to determine its vaccination rate.** This personalized app is easier to use than similar ones made by organizations like The New York Times and Hollywood Reporter. Using this app can help educate parents or curious neighbors as to whether their local schools have met their seal of approval when it comes to vaccination rates. It's also a look at the most current data from the 2015-16 school year.
+This application **will allow users to quickly type in the name of a nearby kindergarten to determine its vaccination rate.** This personalized app is easier to use than similar ones made by organizations like The New York Times and Hollywood Reporter. Using this app can help educate parents or curious neighbors as to whether their local schools have met their seal of approval when it comes to vaccination rates. It's also a look at the most current data from the 2015-16 school year.
 
 
 #Prior Examples
@@ -80,6 +80,7 @@ I'm having trouble identifying what the **new continuous variable** could be in 
 
 #Data Cleaning
 
+**Oh boy.**
 
 #Filtering Options
 
@@ -93,7 +94,6 @@ Users can **sort** the data by vaccination rate or belief exemption rate as perc
 #Views and Routes
 
 Not much to say about these at this point. I will include screenshots when the app is built.
-
 
 #Visualizations
 
