@@ -82,6 +82,18 @@ I'm having trouble identifying what the **new continuous variable** could be in 
 
 **Oh boy.**
 
+The data cleaning process took some time. I will do a breakdown the process below.
+
+**1.** I started with **raw_kinder_data.xls**. It's a renamed version of the original file  from *https://www.cdph.ca.gov/programs/immunize/Documents/2015-16_CA_Kindergarten_Data.xls*.
+
+**2.** Since the first four rows of the *.xls* file contain unnecessary text, I deleted them so the fifth row would become the first. I then re-named the columns with much simpler names. I made sure the corresponding columns still matched with the same data from the original *.xls* file.
+
+**3.** I re-named this new file **clean_kinder.xls**. I would later make another copy called **clean_kinder.csv** so that I could make a join in SQLite.
+
+**4.** I then started with **raw_school_codes.xls**. It's a renamed version of the original file from *ftp://ftp.cde.ca.gov/demo/schlname/pubschls.xls*.
+
+**5.** I then created a new column called *school_code*. This was created by pulling the last seven digits from the much-larger school code. I need to perform this **-RIGHT** function so this school code could be joined with the seven-digit school code in **clean_kinder.xls**.
+
 #Filtering Options
 
 My goal for this project is to allow users to pick a school by including its partial name, let the app identify a match, and then present pertinent info about the school **[name, location, vaccination rate, belief-exemption rate and other factors]** and a satellite or streetview image.
