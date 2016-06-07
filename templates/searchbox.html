@@ -1,18 +1,38 @@
 
-  <form action="{{url_for('results')}}" method="get">
+  <form id="the-form" action="{{url_for('results')}}" method="get">
+        <h4>Sort by:</h4>
 
-        <strong>Sort by:</strong>
-        <input type="radio" name="sortby" value="Highest_PBE_Rates">High Personal Exemption Rate
-        <input type="radio" name="sortby" value="Lowest_PBE_Rates">Low Personal Exemption Rate
 
-        <br>
-        <input type="radio" name="sortby" value="Highest_Enrollment">Largest Kindergarten Enrollment
-        <input type="radio" name="sortby" value="Lowest_Enrollment">Lowest Kindergarten Enrollment
+        <div class="radio">
+            <label>
+            <input type="radio" name="sortby" value="Highest_PBE_Rates" checked=true>
+                        High Personal Exemption Rate
+            </label>
+        </div>
 
-        <br>
+        <div class="radio">
+            <label>
+                <input type="radio" name="sortby" value="Lowest_PBE_Rates">
+            Low Personal Exemption Rate
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="sortby" value="Highest_Enrollment">
+                Largest Kindergarten Enrollment
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="sortby" value="Lowest_Enrollment">
+                Lowest Kindergarten Enrollment
+            </label>
+        </div>
 
-        <strong>City:</strong> <input type="text" name="city" value="">
-
-        <br>
-        <input type="submit" value="Submit">
+    <fieldset class="form-group">
+        <label for="city">City:</label>
+        <input type="text" name="city" value="">
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit">
   </form>

@@ -3,38 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Search results</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <div class="container">
+
+    <div>Search again:   {% include 'searchbox.html' %}</div>
 
 
-  <div>Search again:   {% include 'searchbox.html' %}</div>
+    <p>Your search for <strong>"{{ city }}"</strong>
+    is included below.</p>
 
+    <p>The following results are sorted by <strong>{{sortby}}</strong>. Enjoy perusing this incredible site!</p>
 
-  <p>Your search for <strong>"{{ city }}"</strong>
-  is included below.</p>
-
-  <p>The following results are sorted by <strong>{{sortby}}</strong>. Enjoy perusing this incredible site!</p>
-
-    <table border=1 cellpadding=7>
-    <tr>
-      <th>School Name</th>
-      <th>City</th>
-      <th>Personal Belief Exemption Rate (%)</th>
-      <th>County</th>
-      <th>Vaccination Rate (%)</th>
-    </tr>
-      {% for p in master_data %}
-        <tr>
-          <td><a href="{{ p.school_code}}">{{ p.school_name}}</a></td>
-          <td>{{p.city}}</td>
-          <td>{{p.pbe_per}}</td>
-          <td>{{p.county}}</td>
-          <td>{{p.utd_per}}</td>
-        </tr>
-      {% endfor %}
-  </table>
-
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>School Name</th>
+            <th>City</th>
+            <th>Personal Belief Exemption Rate (%)</th>
+            <th>County</th>
+            <th>Vaccination Rate (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in master_data %}
+            <tr>
+              <td><a href="{{ p.school_code}}">{{ p.school_name}}</a></td>
+              <td>{{p.city}}</td>
+              <td>{{p.pbe_per}}</td>
+              <td>{{p.county}}</td>
+              <td>{{p.utd_per}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </div>
   </body>
 </html>

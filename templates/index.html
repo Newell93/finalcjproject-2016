@@ -8,35 +8,34 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
-  
+
   <body>
     <div class="container">
       <h2>VaccineRateMapper</h2>
-      <p>Designed by Shane Newell, Stanford Journalism Program:</p>            
-      <img src="/static/vaccine.jpg" class="img-rounded" alt="Cinque Terre" width="608" height="572"> 
-    </div>
-  </body>
+      <p>Designed by Shane Newell, Stanford Journalism Program:</p>
+      <img src="/static/vaccine.jpg" class="img-rounded" alt="Cinque Terre" width="608" height="572">
 
-</html>
+      {% include 'searchbox.html' %}
+      <p>Have you ever wanted to know the vaccination rate of a school in your neighborhood? Maybe you're concerned since you're about to put your children in kindergarten, or you could be looking to identify schools where there aren't enough vaccinations to provide herd immunity against measles, mumps or rubella? Do you want the information to be individualized, as oppposed to being plotted on a giant map? </p>
 
+      <p>This application will allow you to quickly type in the name of any public kindergarten in California and determine its vaccination rate. Enjoy! </p>
 
-</head>
-<body>
-  {% include 'searchbox.html' %}
-  <p>Have you ever wanted to know the vaccination rate of a school in your neighborhood? Maybe you're concerned since you're about to put your children in kindergarten, or you could be looking to identify schools where there aren't enough vaccinations to provide herd immunity against measles, mumps or rubella? Do you want the information to be individualized, as oppposed to being plotted on a giant map? </p>
+      <p>Aggregate data comes from <a href="https://afs.stanford.edu/download/?path=/afs/ir/users/s/n/snewell/pivot_table.csv">a .csv file.</a></p>
+    </div><!-- end of footer -->
+    <footer class="bg-inverse">
 
-<p>This application will allow you to quickly type in the name of any public kindergarten in California and determine its vaccination rate. Enjoy! </p>
-
-  <p>Aggregate data comes from <a href="https://afs.stanford.edu/download/?path=/afs/ir/users/s/n/snewell/pivot_table.csv">a .csv file.</a></p>
-
-<footer>
-  <p>Posted on: June 6, 2016</p>
-  <p>Contact information: <a href="mailto:snewell@stanford.edu">
-  snewell@stanford.edu</a>.</p>
-</footer>
+      <div class="container">
+        <p>Posted on: June 6, 2016</p>
+        <p>Contact information: <a href="mailto:snewell@stanford.edu">
+        snewell@stanford.edu</a>.</p>
+      </div>
+    </footer>
 </body>
 </html>
